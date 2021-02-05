@@ -3,6 +3,7 @@ int r = (int)(Math.random()*255);
 int g = (int)(Math.random()*255);
 int b = (int)(Math.random()*255);
 int o = 10;
+int holder = 20;
 boolean magic = false;
 public void setup()
 {
@@ -12,7 +13,7 @@ public void setup()
 public void draw()
 {
   background(0);
-  sierpinski(0, height, 600);
+  sierpinski(0, height, holder);
 }
 public void mouseDragged()//optional
 {
@@ -29,6 +30,12 @@ public void keyPressed(){
 }
 public void mousePressed(){
   magic = false;
+  if (holder >= 600){
+    holder = 20;
+  }
+  else{
+    holder += 20;
+  }
 }
 public void sierpinski(float x, float y, int len) 
 {
