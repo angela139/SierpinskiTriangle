@@ -27,6 +27,9 @@ public void keyPressed(){
   b = (int)(Math.random()*255);
  
 }
+public void mousePressed(){
+  magic = false;
+}
 public void sierpinski(float x, float y, int len) 
 {
   if (len <= 20){
